@@ -1,0 +1,138 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: white; 
+  color: #2D0707;
+}
+
+* { /* universal font */
+  font-family: canva_sans, sans-serif, serif;
+}
+
+@font-face { /*custom font*/
+  font-family: canva_sans;
+  src: url(https://cdn.glitch.global/7919643d-61cc-4c44-b0db-a7659a47c000/CanvaSans-Regular15263162195051178836.f4.f4a4890561b3fddfd1fd9a1b27b6d4a4.woff2?v=1734230486486); 
+}
+
+header {
+  position: fixed; /*stays on top*/
+  top: 0;
+  left: 0;
+  width:  100%; /*set size */
+  height: 90px;
+  padding: 10px;
+  background-color: #01275A;
+  color: white;
+  z-index: 1; /* to show above other elements */
+}
+
+img{ /* for the logo on the top left/goes back to Home */
+  top: 10px;
+  left: 0;
+  padding: 10px;
+  padding-left: 15px;
+  padding-top: 5px;
+  } 
+
+.navitton { /* navigating buttons at the header */
+  text-decoration: none;
+  position: absolute;
+  top: 45px;
+  color: white;
+}
+
+
+/* #calcu, #learn, and #examples are to fix the spacing */
+#calcu {
+  left: 20%;
+}
+#learn {
+  left: 48%;
+}
+#examples {
+  left: 70%;
+}
+
+/* for the Lorem ipsum introduction */
+#words {
+  font-size: 40%;
+  text-align: right; /* so there's space on the left for the title */
+}
+
+/* to make a gradient background */
+#firstContent {
+  padding: 20px 20px;
+  margin: 130px 120px;
+  background-image: linear-gradient(to right, #53efff, #ff6947);
+  border-radius: 35px;
+}
+
+#headr { /* to make the header "header-like" */
+  font-size: 650%;
+  margin-right: -20px; /* remove excess margin */
+}
+
+#subH { /* to make ths subheader "suubheader-like" */
+  font-size: 300%;
+  /* so other content (#words) can display properly: */
+  display: flex; 
+  align-items: flex-start; 
+  gap: 10px;
+}
+
+div#div2 { /* basically the website's body. It is the long, light blue box */
+  background-color: #e4efff;
+  padding: 15px 20px 100%;
+  margin-left: 8%;
+  margin-right: 8%;
+  
+}
+
+.topicton { /* topic buttons that lead to different math topics */
+  text-decoration: none;
+  position: relative;
+  top: -10px;
+  color: white;
+  background-color: #ff6947;
+  border-radius: 35px;
+  padding: 50px 75px;
+  z-index: 0; /*so it doesnt show above/below what it shouldn't */
+  font-size: 125%;
+}
+
+/* #eAl, #arith, and #hAl are to fix the spacing (also topictons) */
+#eAl {
+  left: 45px; /* 45px */
+}
+
+#arith {
+  left: 170px; /* 170px */
+}
+
+#hAl {
+  left: 300px; /* 300px */
+}
+
+
+footer { /* for the fixed footer at the bottom. */
+  bottom: 0;
+  position: fixed;
+  padding: 35px;
+  width: 100%;
+  background-color: #01275A;
+  color: #5D8BCC;
+  line-height: 90%;
+}
+
+.footertton { /* navigating buttons at the footer */
+  text-decoration: none;
+  color: #5D8BCC;
+}
+
+#sources { /* to adjust the "Sources"' position. "About" doesn't need adjusting. */
+  position: relative;
+  left: 100px;
+}

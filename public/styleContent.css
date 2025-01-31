@@ -1,0 +1,238 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: white; 
+  color: #2D0707;
+}
+
+* { /* universal font */
+  font-family: canva_sans, sans-serif, serif;
+}
+
+@font-face { /*custom font*/
+  font-family: canva_sans;
+  src: url(https://cdn.glitch.global/7919643d-61cc-4c44-b0db-a7659a47c000/CanvaSans-Regular15263162195051178836.f4.f4a4890561b3fddfd1fd9a1b27b6d4a4.woff2?v=1734230486486); 
+}
+
+header {
+  position: fixed; /*stays on top*/
+  top: 0;
+  left: 0;
+  width:  100%; /*set size */
+  height: 90px;
+  padding: 10px;
+  background-color: #01275A;
+  color: white;
+  z-index: 2; /* to show above other elements */
+}
+
+#logo{ /* for the logo on the top left/goes back to Home */
+  top: 10px;
+  left: 0;
+  padding: 10px;
+  padding-left: 15px;
+  padding-top: 5px;
+  } 
+
+.navitton { /* navigating buttons at the header */
+  text-decoration: none;
+  position: absolute;
+  top: 45px;
+  color: white;
+}
+
+/* #calcu, #learn, and #examples are to fix the spacing */
+#calcu {
+  left: 20%;
+}
+#learn {
+  left: 48%;
+}
+#examples {
+  left: 70%;
+}
+
+/* following are for the images: */
+#calcuPic {
+  position: absolute;
+  z-index: 1;
+  top: 110px;
+  left: 570px;
+}
+
+#operators { /* image of the operators. Sets position */
+  position: absolute;
+  top: 580px;
+  left: 180px;
+  z-index: 1;
+}
+
+#algebruh {
+  position: absolute;
+  z-index: 1;
+  top: 110px;
+  left: 570px;
+}
+
+#firstContent { /* adjusting the list/table of contents */
+  margin: 86px 0px;
+  padding: 0px;
+  position: fixed;
+  left: 0;
+  z-index: 2;
+  background-color: #f9c8bd;
+  width: 250px;
+  border: none;
+}
+
+#lHeadr { /* list header */
+  font-size: 300%;
+  padding: 20px 85px; /* made bigger compared to #list */
+  color: white;
+  background-color: #ff6947;
+  width: 350px;
+}
+
+#list { /* different overall width compared to #lHeadr */
+  background-color: #f9c8bd;
+  color: #ff6947;
+  font-size: 175%;
+  margin-left: 30px;
+}
+
+#tblcntents1, #tblcntents2, #tblcntents3 { /* takes away text-decoration and returns proper color */
+  text-decoration: none;
+  color: #ff6947;
+}
+
+
+div#div2 { /* basically the website's body. It is the long, light blue box */
+  background-color: #e4efff;
+  padding: 15px 20px 100%;
+  height: 5000px; /*additional height to accomodate topics 1, 2, and 3 */
+  margin-left: 8%;
+  margin-right: 8%;
+  
+}
+
+#secondContent { /* for the "Examples" box. Positioning+colors+sizes */
+  position: absolute;
+  top: 270px;
+  left: 280px;
+  z-index: 0;
+  width: 400px;
+  height: 300px;
+  background-color: #80b6ff;
+  color: #486ea1;
+  font-size: 175%;
+}
+
+#thirdContent { /* for the "Calculator" box. Positioning+colors+sizes */
+  padding: 30px;
+  position: absolute;
+  top: 170px;
+  left: 800px;
+  z-index: 0;
+  width: 400px;
+  height: 500px;
+  background-color: #80b6ff;
+  color: #486ea1;
+  font-size: 175%;
+}
+
+
+button { /* for the buttons that will change into the answer */
+  font-size: 100%;
+  border: none;
+  background-color: #486ea1;
+  color: #80b6ff;
+}
+
+
+#firstTop { /* Short for #firstTopic. Positioning+colors+sizes */
+  padding: 30px;
+  position: absolute;
+  top: 900px;
+  left: 250px;
+  margin-right: 250px;
+  z-index: 0;
+  background-color: #80b6ff;
+  color: #486ea1;
+}
+
+#secondTop { /* Short for #secondTopic. Positioning+colors+sizes */
+  padding: 30px;
+  position: absolute;
+  top: 1500px;
+  left: 250px;
+  margin-right: 250px;
+  z-index: 0;
+  background-color: #80b6ff;
+  color: #486ea1;
+}
+
+#thirdTop { /* Short for #thirdTopic. Positioning+colors+sizes */
+  padding: 30px;
+  position: absolute;
+  top: 1900px;
+  left: 250px;
+  margin-right: 250px;
+  z-index: 0;
+  background-color: #80b6ff;
+  color: #486ea1;
+}
+
+
+
+footer { /* for the fixed footer at the bottom. */
+  bottom: 0;
+  position: fixed;
+  padding: 35px;
+  width: 100%;
+  background-color: #01275A;
+  color: #5D8BCC;
+  line-height: 90%;
+  z-index: 2;
+}
+
+.footertton { /* navigating buttons at the footer */
+  text-decoration: none;
+  color: #5D8BCC;
+}
+
+#sources {  /* to adjust the "Sources"' position. "About" doesn't need adjusting. */
+  position: relative;
+  left: 100px;
+}
+
+
+
+
+/*all of the following is for the collapsable list*/
+
+details {
+  user-select: none;
+}
+
+details>summary span.icon {
+  width: 18px;
+  height: 24px;
+  transition: all 0.3s;
+  margin-left: none;
+}
+
+details[open] summary span.icon { /* for "cool" animation on the arrow */
+  transform: rotate(90deg);
+}
+
+summary {
+  display: flex;
+  cursor: pointer; /* curser turns into a pointer */
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
