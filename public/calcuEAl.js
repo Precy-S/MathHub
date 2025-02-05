@@ -51,9 +51,6 @@ function solveeasy(){
     
 }
 
-
-
-
 //press enter to automatically press the button
 var input = document.getElementById("input3");
 input.addEventListener("keypress", function(event) {

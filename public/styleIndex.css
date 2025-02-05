@@ -29,21 +29,34 @@ header {
   z-index: 1; /* to show above other elements */
 }
 
-img{ /* for the logo on the top left/goes back to Home */
+#logo{ /* for the logo on the top left/goes back to Home */
+  display: block;
+  height: 80px;
+  width: 80px;
   top: 10px;
   left: 0;
-  padding: 10px;
   padding-left: 15px;
   padding-top: 5px;
+  background: url("https://cdn.glitch.global/7919643d-61cc-4c44-b0db-a7659a47c000/home.png?v=1738739963737") no-repeat 0px 0px;
+  transition: 0.3s;
   } 
+
+#logo:hover { /*when ypu hover over the logo*/
+  background: url("https://cdn.glitch.global/7919643d-61cc-4c44-b0db-a7659a47c000/homeGray.png?v=1738740003495") no-repeat 0px 0px;
+}
 
 .navitton { /* navigating buttons at the header */
   text-decoration: none;
   position: absolute;
   top: 45px;
   color: white;
+  transition: 0.3s;
 }
 
+
+.navitton:hover { /* when hovering */
+  color: #ff6947;
+}
 
 /* #calcu, #learn, and #examples are to fix the spacing */
 #calcu {
@@ -101,19 +114,27 @@ div#div2 { /* basically the website's body. It is the long, light blue box */
   padding: 50px 75px;
   z-index: 0; /*so it doesnt show above/below what it shouldn't */
   font-size: 125%;
+  transition: 0.2s;
+}
+
+.topicton:hover {
+  background-color: white;
+  color: #ff6947;
+}
+
+div#div3 {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
 }
 
 /* #eAl, #arith, and #hAl are to fix the spacing (also topictons) */
 #eAl {
-  left: 45px; /* 45px */
-}
-
-#arith {
-  left: 170px; /* 170px */
+  right: 5vw;
 }
 
 #hAl {
-  left: 300px; /* 300px */
+  left: 5vw;
 }
 
 
@@ -130,6 +151,11 @@ footer { /* for the fixed footer at the bottom. */
 .footertton { /* navigating buttons at the footer */
   text-decoration: none;
   color: #5D8BCC;
+  transition: 0.3s;
+}
+
+.footertton:hover {
+  color: #ff6947;
 }
 
 #sources { /* to adjust the "Sources"' position. "About" doesn't need adjusting. */

@@ -1,0 +1,109 @@
+<!-- for static files -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="author" content="Chavenia, Senen 9-Potassium">
+  <meta name="description" content="">
+  <meta name="keywords" content="PSHS-MC, CS3, meta, favicon, graded, for school, CS3 student, Potassium, Personalized, 
+   input, output, HTML, CSS, JavaScript">
+  <title></title>
+  <link href="styleGame.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/x-icon" href="https://cdn.glitch.global/7919643d-61cc-4c44-b0db-a7659a47c000/mHubFavicon?v=1734233335738" size="16x16">
+</head>
+  <body>
+    <header>
+      
+      <a href="index.html" id="logo" alt="Home" title = "Math Hub: return Home"> <!--anchor tag-->
+      </a>
+
+      <a id="calcu" href="draft.html" class="navitton">
+        CALCULATOR
+      </a>  
+      
+      <a id="learn" href="learn.html" class="navitton">
+        LEARN
+      </a>
+      
+      <a id="examples" href="draft.html" class="navitton">
+        EXAMPLES
+      </a>  
+      
+      
+    </header>
+    <div id="div2">  
+      
+      <details id="rules">
+        <summary class="lHeadr">
+          <span class="icon">»</span>
+          Rules
+        </summary>
+        <ul class="list">
+          <li class="tblcntents"> Use either the quadratic formula or completing the square to solve these problems!</li>
+          <br>
+          <li class="tblcntents"> Round your answers to the nearest integer </li>
+          <br>
+          <li class="tblcntents">For answers that involve square roots, you may use a calculator</li>
+          <br>
+          <li class="tblcntents">Lastly, have fun!</li>
+        </ul>
+      </details>
+      
+      <h1>
+        <pre>g<b>A</b>me, <b>B</b>, <b>C</b>!</pre>
+      </h1>
+      
+      <details id="scores">
+        <summary class="lHeadr">
+          <span class="icon">»</span>
+          Your scores
+        </summary>
+        <ul class="list" id="sforJs">
+        </ul>
+      </details>
+    
+      <div id="userAnswer">
+        Your answer:
+        <div id="inputs">
+          x₁=<input id="gameinput1" type="number"/>
+          <br>
+          x₂=<input id="gameinput2" type="number"/>
+          
+          <button onclick="getA()" id="solve">Submit</button><br>
+        </div>
+      </div>
+      
+      <div class="alert" id="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        Congrats! Both are correct! :D
+      </div>
+      
+      <div id="question">
+        Question <span id="qNum"></span>/15
+        <div id="actualQ">PLACEHOLDER</div>
+      </div>
+      
+      <div id="curScore">
+        Current Score
+        <div id="actualS">0</div>
+      </div>
+      
+    </div>
+
+  
+    <footer>
+      <a id="about" class="footertton" href="draft.html">
+        About
+      </a>
+      
+      <a id="sources" class="footertton" href="sources.html">
+        Sources
+      </a>
+    </footer>
+
+
+    <script defer src="game.js"></script>
+  </body>
+</html>

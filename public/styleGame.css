@@ -69,61 +69,51 @@ header {
   left: 70%;
 }
 
-/* following are for the images: */
-#calcuPic {
+#rules { /* adjusting the list/table of contents */
+  top: 156px;
   position: absolute;
+  left: 12%;
   z-index: 1;
-  top: 110px;
-  left: 570px;
-}
-
-#operators { /* image of the operators. Sets position */
-  position: absolute;
-  top: 580px;
-  left: 180px;
-  z-index: 1;
-}
-
-#algebruh {
-  position: absolute;
-  z-index: 1;
-  top: 110px;
-  left: 570px;
-}
-
-#firstContent { /* adjusting the list/table of contents */
-  margin: 86px 0px;
-  padding: 0px;
-  position: fixed;
-  left: 0;
-  z-index: 2;
   background-color: #f9c8bd;
-  width: 250px;
   border: none;
+  width: 20%;
 }
 
-#lHeadr { /* list header */
-  font-size: 300%;
-  padding: 20px 85px; /* made bigger compared to #list */
-  color: white;
-  background-color: #ff6947;
-  width: 350px;
+#scores { /* adjusting the list/table of contents */
+  top: 156px;
+  position: absolute;
+  right: 12%;
+  z-index: 1;
+  background-color: #f9c8bd;
+  border: none;
+  width: 20%;
+}
+
+.lHeadr { /* list header */
+  box-sizing: border-box;
+  font-size: 250%;
+  padding: 5px 85px; /* made bigger compared to #list */
+  color: #ff6947;
+  background-color: #F9C8BD;
+  border: 2px solid #ff6947;
   transition: 0.3s;
 }
 
-#lHeadr:hover {
-  background-color: #f9c8bd;
-  color: #ff6947;
+.lHeadr:hover {
+  background-color: #ff6947;
+  color: white;
+  border: 2px solid #ff6947;
 }
 
-#list { /* different overall width compared to #lHeadr */
+.list { /* different overall width compared to #lHeadr */
+  box-sizing: border-box;
+  padding: 10px;
   background-color: #f9c8bd;
   color: #ff6947;
-  font-size: 175%;
   margin-left: 30px;
 }
 
-#tblcntents1, #tblcntents2, #tblcntents3 { /* takes away text-decoration and returns proper color */
+.tblcntents { /* takes away text-decoration and returns proper color */
   text-decoration: none;
   color: #ff6947;
 }
@@ -138,34 +128,67 @@ div#div2 { /* basically the website's body. It is the long, light blue box */
   
 }
 
-#secondContent { /* for the "Examples" box. Positioning+colors+sizes */
+h1 {
+  box-sizing: border-box;
+  height: 150px;
+  width: 30%;
   position: absolute;
-  top: 270px;
-  left: 280px;
-  z-index: 0;
-  width: 400px;
-  height: 300px;
-  background-color: #80b6ff;
-  color: #486ea1;
-  font-size: 175%;
+  top: 196px;
+  text-align: center;
+  background-color: black;
+  margin: 0;
+  border-radius:25px;
+  border: 4px solid white;
+  color: white;
+  background-color: #ff6947;
+  font-size: 300%;
+  
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center
+    
 }
 
-#thirdContent { /* for the "Calculator" box. Positioning+colors+sizes */
-  padding: 30px;
+#userAnswer {
+  box-sizing: border-box;
+  
+  padding: 30px 10px;
+  padding-bottom: 0;
+  width:25%;
+
+  left:18%;
   position: absolute;
-  top: 170px;
-  left: 800px;
-  z-index: 0;
-  width: 400px;
-  height: 500px;
+  top: 330px;
   background-color: #80b6ff;
   color: #486ea1;
-  font-size: 175%;
+  font-size:200%;
+  
+  border-radius:25px;
+  text-align:center;
 }
 
+#inputs {
+  font-size: 160%;
+}
+
+input {
+  border: 0;
+  border-radius: 15px;
+  padding: 10px;
+}
 
 button { /* for the buttons that will change into the answer */
-  font-size: 100%;
+  display: block;
+  margin: auto;
+  margin-top: 13%;
+  margin-bottom: 0;
+  
+  padding: 3% 8%;
+  border-radius: 15px;
+  font-size: 50%;
   border: none;
   background-color: #486ea1;
   color: #80b6ff;
@@ -178,39 +201,96 @@ button:hover {
   cursor: pointer;
 }
 
-#firstTop { /* Short for #firstTopic. Positioning+colors+sizes */
-  padding: 30px;
-  position: absolute;
-  top: 900px;
-  left: 250px;
-  margin-right: 250px;
-  z-index: 0;
-  background-color: #80b6ff;
-  color: #486ea1;
+/* The alert message box */
+.alert {
+  display:none;
+  box-sizing: border-box;
+  position: fixed;
+  z-index:3;
+  opacity:0.8;
+  font-size: 500%;
+  text-align: center;
+  
+  width: 70%;
+  height: 50%;
+  
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  margin: auto;
+
+  padding: 40px;
+  background-color: #53efff;
+  color: black;
+  border: 3px solid white;
+  border-radius: 30px;
 }
 
-#secondTop { /* Short for #secondTopic. Positioning+colors+sizes */
-  padding: 30px;
-  position: absolute;
-  top: 1500px;
-  left: 250px;
-  margin-right: 250px;
-  z-index: 0;
-  background-color: #80b6ff;
-  color: #486ea1;
+/* The close button */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 1em;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-#thirdTop { /* Short for #thirdTopic. Positioning+colors+sizes */
-  padding: 30px;
-  position: absolute;
-  top: 1900px;
-  left: 250px;
-  margin-right: 250px;
-  z-index: 0;
-  background-color: #80b6ff;
-  color: #486ea1;
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: black;
 }
 
+#question {
+  box-sizing: border-box;
+  
+  padding: 30px 30px;
+  padding-bottom:50px;
+  width:35%;
+
+  right:15%;
+  position: absolute;
+  top: 330px;
+  background-color: #80b6ff;
+  color: #486ea1;
+  font-size:200%;
+  
+  border:4px solid #e4efff;
+  border-radius:25px;
+  text-align:center;
+}
+
+#actualQ {
+  font-size:150%;
+  color: #01275a;
+}
+
+#curScore {
+  box-sizing: border-box;
+  
+  padding: 10px 30px;
+  padding-bottom:20px;
+  width:25%;
+
+  right:20%;
+  position: absolute;
+  top: 570px;
+  background-color: #aacfff;
+  color: #486ea1;
+  font-size:200%;
+  
+  border:4px solid #e4efff;
+  border-radius:25px;
+  text-align:center;
+}
+
+#actualS {
+  font-size:150%;
+}
 
 
 footer { /* for the fixed footer at the bottom. */
@@ -249,8 +329,11 @@ details {
 }
 
 details>summary span.icon {
-  width: 18px;
-  height: 24px;
+  height: 2px;
+  position: relative;
+  right:50px;
+  padding:2px;
+  display:block;
   transition: all 0.3s;
   margin-left: none;
 }
@@ -260,8 +343,9 @@ details[open] summary span.icon { /* for "cool" animation on the arrow */
 }
 
 summary {
-  display: flex;
   cursor: pointer; /* curser turns into a pointer */
+  text-align: center;
+  list-style: none;
 }
 
 summary::-webkit-details-marker {
