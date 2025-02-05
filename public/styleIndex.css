@@ -152,10 +152,63 @@ footer { /* for the fixed footer at the bottom. */
   text-decoration: none;
   color: #5D8BCC;
   transition: 0.3s;
+  position: relative;
+  bottom: 10px;
+  left: 20px;
 }
 
 .footertton:hover {
   color: #ff6947;
+}
+
+#both {
+  display: inline-block;
+  scale: 0.5;
+  position: relative;
+  margin-left: -5px;
+  top: 15px;
+  margin: -30px;
+}
+
+#fb {
+  display: inline-block;
+  background: url("https://cdn.glitch.global/7919643d-61cc-4c44-b0db-a7659a47c000/socMed.png?v=1738768798088") no-repeat -338px -167px;
+	width: 64px;
+	height: 62px;
+  transition: 0.2s;
+}
+
+#gh {
+  display: inline-block;
+  background: url("https://cdn.glitch.global/7919643d-61cc-4c44-b0db-a7659a47c000/socMed.png?v=1738768798088") no-repeat -766px -167px;
+	width: 61px;
+	height: 61px;
+  margin-left: 15px;
+  transition: 0.2s;
+}
+
+#email {
+  display: inline-block;
+  background: url("https://cdn.glitch.global/7919643d-61cc-4c44-b0db-a7659a47c000/socMed.png?v=1738768798088") no-repeat -20px -168px;
+	width: 61px;
+	height: 62px;
+  margin-left: 15px;
+  transition: 0.2s;
+}
+
+#fb:hover {
+  filter: grayscale(100%);
+  scale:1.2;
+}
+
+#gh:hover {
+  filter: grayscale(100%);
+  scale:1.2;
+}
+
+#email:hover{
+  filter: grayscale(100%);
+  scale:1.2;
 }
 
 #sources { /* to adjust the "Sources"' position. "About" doesn't need adjusting. */
