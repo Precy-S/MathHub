@@ -1,1 +1,181 @@
+<!-- for static files -->
 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="author" content="Chavenia, Senen 9-Potassium">
+  <meta name="description" content="">
+  <meta name="keywords" content="PSHS-MC, CS3, meta, favicon, graded, for school, CS3 student, Potassium, Personalized, 
+   input, output, HTML, CSS, JavaScript">
+  <title></title>
+  <link href="styleContent.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/x-icon" href="https://cdn.glitch.global/7919643d-61cc-4c44-b0db-a7659a47c000/mHubFavicon?v=1734233335738" size="16x16">
+</head>
+  <body>
+    <header>
+      <a href="/" id="logo" alt="Home" title="Math Hub: return Home">
+        <!--anchor tag-->
+      </a>
+
+      <a id="calcu" href="/calcu" class="navitton"> CALCULATOR </a>
+
+      <a id="learn" href="/learn" class="navitton"> LEARN </a>
+
+      <a id="examples" href="/examples" class="navitton"> EXAMPLES </a>
+      
+      {{#if loginUser}}
+        <div id="loggedAccount" class="navitton">
+          {{loginUser}}
+        </div>
+      
+        <div id="logInOut" class="navitton">
+          <div>
+            <a href="/settings" style="text-decoration: none;">Acc Info</a>
+          </div>
+          <br>
+          <div>
+            <a href="/signUp" style="text-decoration: none;">Sign Up</a>
+          </div>
+          <br>
+          <div>
+            <a href="/logIn" style="text-decoration: none;">Switch Acc</a>
+          </div>   
+          <br>
+          <div>
+            <a href="/logOut" style="text-decoration: none;">Log Out</a>
+          </div>   
+        </div>
+      {{else}}
+      <div id="account" class="navitton"> <a href="/signUp">SIGN UP</a> <a href="/logIn">LOG IN</a></div>
+      {{/if}}
+      
+    </header>
+    <div id="div2">      
+      <details id="firstContent">
+        <summary id="lHeadr">
+          <span class="icon">»</span>
+          Hard Algebra
+        </summary>
+        <ul id="list">
+          <li><a id="tblcntents1" href="#firstTop">1st topic</a></li>
+          <br>
+          <li><a id="tblcntents2" href="#secondTop">2nd topic</a></li>
+          <br>
+          <li><a id="tblcntents3" href="#thirdTop">3rd topic</a></li>
+          <br>
+          <li>Formula:</li>
+        </ul>
+      </details>
+    
+      <figure id="algebruh">
+        <img src="https://cdn.glitch.global/7919643d-61cc-4c44-b0db-a7659a47c000/algebruh.JPG?v=1734962925647"  height = "110px" width = "110px" alt="just a meme lmao" title = "algebruh lol">
+        <figcaption style = "color: #486ea1; opacity: 0.5;">
+           Algrbuh lol.
+        </figcaption>
+      </figure>
+      
+      <div id="secondContent" style="font-size:89%;">
+        <pre>
+        Examples:
+        example 1
+        x^2 + 2x + 1 = 0
+        solution
+        x^2+2x+1=0
+        (x+1)^2=0
+        x+1=0
+        x=-1 (multiplicity 2)
+
+        example 2
+        x^2-10x=0
+        solution
+        x^2-10x=0
+        x(x-10)=0
+        x=0, x=10
+        </pre>
+      </div>
+      
+      <div id="thirdContent">
+        Calculator:<br>
+        please enter a, b, and c from the general formula<br>
+        a=<input id="input1" type="number"/><br>
+        b=<input id="input2" type="number"/><br>
+        c=<input id="input3" type="number"/><br><br>
+        
+        <button onclick="solve()" id="solve">Answer:</button><br>
+        <span>
+      <p>
+        X1= &nbsp<span id="output1"></span>
+      </p>      
+      <p>
+        X2= &nbsp<span id="output2"></span>
+        </p>
+        </span>
+      </div>
+      
+      
+      <div id="firstTop">
+        <h1>
+          1st Topic: linear functions
+        </h1>
+        <p>
+          Before going to 2nd degree polynomials, we must relearn how to solve the 1st degree equations involving 1 variable, "x"<br><br>
+          Basically, the principle of this topic is finding a way to 'isolate' and find the value of x such that the equation would be true.<br>
+          The format of this is "ax+b=c" and the goal is to get "x=d" where d is the value that would make the equation true. <br><br>
+          We achieve this using arithmetic operations. We cancel the b in "ax+b=c" by subtracting both sides by b to get "ax=c-b" and then dividing both sides by a to isolate x and get "x=(c-b)/a"
+          
+        </p>
+      </div>
+      
+      <div id="secondTop">
+        <h1>
+          2nd Topic: factoring
+        </h1>
+        <p>
+          A quadratic equation's general format is "ax^2+bx+c=0" where x^2 is just x*x. This equation can always be written in "a(x-p)(x-q)=0" where p and q are the zeroes or the values that would make the quadratic equation true.<br><br>
+          To factor, all you need to do is to find 2 values that has a sum of b and a product equal to a and c. Then, you have to separate b to get "ax^2+dx+ex+c" such that a and d have common factors aswell as e and c.<br><br>
+          Next, you have to get the GCF of a and d, and e and c. The resulting equation should be "ax(x+d)+c(x+d)" then, just divide both terms by (x+d) and put it outside, then add ax and c to get "(x+d)(ax+c)".<br>
+          Lastly, just divide ax+c by a to get "a(x-p)(x-q)=0" and p and q are your answers to the quadratic equations!!!<br><br>
+          Note: this method only works for certain quadratic equations where it is factorable.
+        </p>
+      </div>
+      
+      <div id="thirdTop" style="top:2200px;">
+        <h1>
+          3rd Topic: quadratic formula
+        </h1>
+        <p>
+          Not every equation can be solved by factoring. This is why we need to learn the <span style="font-weight:bold;">quadratic formula</span><br>
+          But first, you must ge tthe general formula which is "ax^2+bx+c=0" by applying what you learned in simplification and transposing.<br>
+          Basically, justg transpose everything to the left side until you get 0 on the right. <br>
+          Now that you have the general formula, you must remember the quadratic formula: <br>
+          <span> <img src="https://cdn.glitch.global/7919643d-61cc-4c44-b0db-a7659a47c000/quadratic%20formula.JPG?v=1738762740671"> </img></span><br>
+          You just need to substitute a, b, and c to the formula and evaluate it using out topic from arithmetic.
+        </p>
+      </div>
+    </div>
+
+  
+    <footer>
+      <span id="both">
+        <a href="https://www.facebook.com/profile.php?id=61571987821440"><div
+            id="fb"
+          ></div></a>
+        <a href="https://precy-s.github.io/MathHub/public/"><div
+            id="gh"
+          ></div></a>
+        <a href="mailto:hubforhighschoolmath@gmail.com"><div
+            id="email"
+          ></div></a>
+      </span>
+
+      <a id="about" class="footertton" href="/about"> About </a>
+
+      <a id="sources" class="footertton" href="/sources"> Sources </a>
+    </footer>
+
+
+    <script defer src="calcuEAl.js"></script>
+  </body>
+</html>
