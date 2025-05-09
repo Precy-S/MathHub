@@ -1,44 +1,57 @@
-# Hello Node!
+# Project Update Plan
 
-This project includes a Node.js server script and a web page that connects to it. The front-end page presents a form the visitor can use to submit a color name, sending the submitted value to the back-end API running on the server. The server returns info to the page that allows it to update the display with the chosen color. 🎨
+This project will be updated to include persistent data. This persistent data shall be user account login data to be used by the server to log the user back into their own account: to be able to review back mistakes and their correct answers, and associate scores with their usernames.
 
-[Node.js](https://nodejs.org/en/about/) is a popular runtime that lets you run server-side JavaScript. This project uses the [Fastify](https://www.fastify.io/) framework and explores basic templating with [Handlebars](https://handlebarsjs.com/).
+To execute the gathering of this data, we will have a 'sign up' and 'log in' portion in our website, modifying MathHub's header. Additionally, we would convert all of the .html files we have into .hbs. This is so that we can make use of handlebars to incorporate the histroy of scores of the user.
 
-_Last updated: 14 August 2023_
+The history of the user's scores in the game will be in a separate webpage. The user can access their scores by logging in to their account and clicking the "your scores" section in the game which will direct them to their score history.
 
-## Prerequisites
+## Data
 
-You'll get best use out of this project if you're familiar with basic JavaScript. If you've written JavaScript for client-side web pages this is a little different because it uses server-side JS, but the syntax is the same!
+Type of data: User account login data<br>
+Purpose: To log in to the site; have access to history, and have scores links to own username
 
-## What's in this project?
+Structure in JSON format:<br>
+"accounts": {<br> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "username": {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"password": text-string, <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"email": email-formatted-text-string, <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"profile": first-two-letters-of-username-as-text-string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"scores": numerical-array<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "username2": {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"password": text-string, <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"email": email-formatted-text-string, <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"profile": first-two-letters-of-username-as-text-string<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"scores": numerical-array<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+}
+   
+example:<br>
+"accounts": {<br> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Math Nerd": {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"password": "ultr4m4thm4thn3rdthr33th0us4nd", <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"email": "hubforhighschoolmath@gmail.com", <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"profile": "Ma"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"scores": [4,2,6,9,10,14,15]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "OtherNerd": {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"password": "0th3erN3rd", <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"email": "otherthernerd@yahoo.com", <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"profile": "Ot"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"scores": [1,4,3,5,7,8,10]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+}
 
-← `README.md`: That’s this file, where you can tell people what your cool website does and how you built it.
+   
+## Wireframes
 
-← `public/style.css`: The styling rules for the pages in your site.
+![Glitch](https://cdn.glitch.global/7919643d-61cc-4c44-b0db-a7659a47c000/a34c0065-3e7f-4c69-a080-eeed4cf053b6.image.png?v=1742997318244)
+![Glitch](https://cdn.glitch.global/7919643d-61cc-4c44-b0db-a7659a47c000/375a8f3e-8b50-4ee9-a656-40c067d130a2.image.png?v=1742997337679)
+![Glitch](https://cdn.glitch.global/7919643d-61cc-4c44-b0db-a7659a47c000/c775b581-47f3-43f0-bbe7-4c381c4a2bf8.image.png?v=1742997348441)
+![Glitch](https://cdn.glitch.global/7919643d-61cc-4c44-b0db-a7659a47c000/958c8df3-5797-4096-954d-e8c14860637a.image.png?v=1742997363793)
+![Glitch](https://cdn.glitch.global/7919643d-61cc-4c44-b0db-a7659a47c000/9c90921c-f91c-47a3-892d-eb040d242328.image.png?v=1742998666576)
 
-← `server.js`: The **Node.js** server script for your new site. The JavaScript defines the endpoints in the site back-end, one to return the homepage and one to update with the submitted color. Each one sends data to a Handlebars template which builds these parameter values into the web page the visitor sees.
 
-← `package.json`: The NPM packages for your project's dependencies.
-
-← `src/`: This folder holds the site template along with some basic data files.
-
-← `src/pages/index.hbs`: This is the main page template for your site. The template receives parameters from the server script, which it includes in the page HTML. The page sends the user submitted color value in the body of a request, or as a query parameter to choose a random color.
-
-← `src/colors.json`: A collection of CSS color names. We use this in the server script to pick a random color, and to match searches against color names.
-
-← `src/seo.json`: When you're ready to share your new site or add a custom domain, change SEO/meta settings in here.
-
-## Try this next 🏗️
-
-Take a look in `TODO.md` for next steps you can try out in your new site!
-
-___Want a minimal version of this project to build your own Node.js app? Check out [Blank Node](https://glitch.com/edit/#!/remix/glitch-blank-node)!___
-
-![Glitch](https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2FLogo_Color.svg?v=1602781328576)
-
-## You built this with Glitch!
-
-[Glitch](https://glitch.com) is a friendly community where millions of people come together to build web apps and websites.
-
-- Need more help? [Check out our Help Center](https://help.glitch.com/) for answers to any common questions.
-- Ready to make it official? [Become a paid Glitch member](https://glitch.com/pricing) to boost your app with private sharing, more storage and memory, domains and more.
