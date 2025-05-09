@@ -1,1 +1,177 @@
+<!-- for static files -->
 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="author" content="Chavenia, Senen 9-Potassium">
+  <meta name="description" content="">
+  <meta name="keywords" content="PSHS-MC, CS3, meta, favicon, graded, for school, CS3 student, Potassium, Personalized, 
+   input, output, HTML, CSS, JavaScript">
+  <title></title>
+  <link href="styleContent.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/x-icon" href="https://cdn.glitch.global/7919643d-61cc-4c44-b0db-a7659a47c000/mHubFavicon?v=1734233335738" size="16x16">
+</head>
+  <body>
+    <header>
+      <a href="/" id="logo" alt="Home" title="Math Hub: return Home">
+        <!--anchor tag-->
+      </a>
+
+      <a id="calcu" href="/calcu" class="navitton"> CALCULATOR </a>
+
+      <a id="learn" href="/learn" class="navitton"> LEARN </a>
+
+      <a id="examples" href="/examples" class="navitton"> EXAMPLES </a>
+      
+      {{#if loginUser}}
+        <div id="loggedAccount" class="navitton">
+          {{loginUser}}
+        </div>
+      
+        <div id="logInOut" class="navitton">
+          <div>
+            <a href="/settings" style="text-decoration: none;">Acc Info</a>
+          </div>
+          <br>
+          <div>
+            <a href="/signUp" style="text-decoration: none;">Sign Up</a>
+          </div>
+          <br>
+          <div>
+            <a href="/logIn" style="text-decoration: none;">Switch Acc</a>
+          </div>   
+          <br>
+          <div>
+            <a href="/logOut" style="text-decoration: none;">Log Out</a>
+          </div>   
+        </div>
+      {{else}}
+      <div id="account" class="navitton"> <a href="/signUp">SIGN UP</a> <a href="/logIn">LOG IN</a></div>
+      {{/if}}
+      
+    </header>
+    <div id="div2">      
+      <details id="firstContent">
+        <summary id="lHeadr">
+          <span class="icon">»</span>
+          Easy Algebra
+        </summary>
+        <ul id="list">
+          <li><a id="tblcntents1" href="#firstTop">1st topic</a></li>
+          <br>
+          <li><a id="tblcntents2" href="#secondTop">2nd topic</a></li>
+          <br>
+          <li><a id="tblcntents3" href="#thirdTop">3rd topic</a></li>
+          <br>
+          <li>Formula:</li>
+        </ul>
+      </details>
+    
+      <figure id="algebruh">
+        <img src="https://cdn.glitch.global/7919643d-61cc-4c44-b0db-a7659a47c000/algebruh.JPG?v=1734962925647"  height = "110px" width = "110px" alt="just a meme lmao" title = "algebruh lol">
+        <figcaption style = "color: #486ea1; opacity: 0.5;">
+           Algebruh lol.
+        </figcaption>
+      </figure>
+      
+      <div id="secondContent"  style="font-size:105%;">
+        <pre>
+        Examples:
+        example 1
+        6x+40=4
+        solution
+        6x+40=4=>6x=-36=>
+        x=-6
+
+        example 2
+        4+6x-3=x
+        solution
+        4+6x-3=x=>6x-x=-(4-3)=>5x=-1*1=>
+        x=-1/5
+        </pre>
+      </div>
+      
+      <div id="thirdContent">
+        Calculator:<br>
+        please enter a, b, and c from the general formula (ax+b=c)<br>
+        a=<input id="easyinput1" type="number"/><br>
+        b=<input id="easyinput2" type="number"/><br>
+        c=<input id="easyinput3" type="number"/><br><br>
+        
+        <button onclick="solveeasy()">Answer:</button><br>
+        <span>
+      <p>
+        X1= &nbsp<span id="linearVal"></span>
+      </p>
+        </span>
+      </div>
+      
+      
+      <div id="firstTop">
+        <h1>
+          1st Topic: definition of terms
+        </h1>
+        <p>
+          For linear equations, there is an unknown value that we have to find. This is called a variable. A variable is something that is usually denoted as a letter, usually "x", "y", or sometimes "z" but for this lesson, we'll use x as our main variable.<br>
+          On the other hand, the opposite of variables are constants. These are the numbers which have a fixed value and cannot be changed in any way, unlike the variable which value can be changed. <br>
+          In a linear equation, there is also a thing called "Terms" a term is a number with or without a variable. It is the values in the equation which are separated by an addition or a subtraction sign. <br>
+          When you combine terms and add 1 variable to the mix, you get a linear equation or an equation with one variabel. This is usually denoted as "ax+b=c". The terms here are "ax", "b", and c. <br>
+          Lastly, the "a" in the equation mentioned above is the "coefficient" of the equation. A coefficient is the number that is directly attached to the variable. Side not: if a value and another value are directly touching each other (or are connected by parenthesis), assume that it is multiplication
+        </p>
+      </div>
+      
+      <div id="secondTop">
+        <h1>
+          2nd Topic: Simplifying
+        </h1>
+        <p>
+           This topic requires knowlege from the topic of arithmetic. <br>
+          Simplifying a linear equation is actually very simple. You just have to add like terms <br>
+          Because linear equations arn't always written as "ax+b=c", you must learn how to simplify it <br>
+          To simplify, you must determine which terms are variables and which are constants. Once you've found it, you must add/subtract them depending on its sign <br>
+          For example, if the equation is "2x+5x+7+8=3+2", you may simplify by findint the terms with variables (2x and 5x) and constants (7, 8, 3, and 2). After that, add the variabels to get 7x <br>
+          and the constants will result in (7+8=15) and on the right side, it will reult in "3+2=5". Ths gives the final equation which is 7x+15=5. And that's simplifying<br>
+          
+        </p>
+      </div>
+      
+      <div id="thirdTop" style="top:2200px;">
+        <h1>
+        3rd Topic: Transposing
+        </h1>
+        <p>
+          This topic is all about how to balance an equation. It involves prior knowledge to our previous lessons which was all about arithmetic. <br>
+          To start, a linear equation's general formula is ax+b=c as mentioned from the past 2 topics. You must think of an equation as something balanced. If you do something to the left of the equation, you must do the same to the right.
+          To solve for x, we must isolate it on the left side of the equation by modifying said equation.<br>
+          For ax+b=c, you can subtract b from both sides to cancel it and get ax=c-b. Then, cancel the a by dividing both sides by a (remember to keep the balance!) and get the final equation x=(c-b)/a <br>
+          Let's apply it! For example you are given the equation from last topic; 2x+5x+7+8=3+2. You must simplify it first to get <br>
+          7x+15=5. Next, subtract 15 from both sides to get 7x=5-15 or 7x=-10. Now, divide 7 from both sides to cancel it. It will result in x=-10/7 which is the value of x that would satisfy the equation.                                                                                                                             
+        </p>
+      </div>
+    </div>
+
+  
+    <footer>
+      <span id="both">
+        <a href="https://www.facebook.com/profile.php?id=61571987821440"><div
+            id="fb"
+          ></div></a>
+        <a href="https://precy-s.github.io/MathHub/public/"><div
+            id="gh"
+          ></div></a>
+        <a href="mailto:hubforhighschoolmath@gmail.com"><div
+            id="email"
+          ></div></a>
+      </span>
+
+      <a id="about" class="footertton" href="/about"> About </a>
+
+      <a id="sources" class="footertton" href="/sources"> Sources </a>
+    </footer>
+
+
+    <script defer src="calcuEAl.js"></script>
+  </body>
+</html>
