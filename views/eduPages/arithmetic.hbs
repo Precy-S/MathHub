@@ -1,1 +1,191 @@
+<!-- for static files -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="author" content="Chavenia, Senen 9-Potassium">
+  <meta name="description" content="">
+  <meta name="keywords" content="PSHS-MC, CS3, meta, favicon, graded, for school, CS3 student, Potassium, Personalized, 
+   input, output, HTML, CSS, JavaScript">
+  <title></title>
+  <link href="styleContent.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/x-icon" href="https://cdn.glitch.global/7919643d-61cc-4c44-b0db-a7659a47c000/mHubFavicon?v=1734233335738" size="16x16">
+</head>
+  <body>
+    <header>
+      <a href="/" id="logo" alt="Home" title="Math Hub: return Home">
+        <!--anchor tag-->
+      </a>
+
+      <a id="calcu" href="/calcu" class="navitton"> CALCULATOR </a>
+
+      <a id="learn" href="/learn" class="navitton"> LEARN </a>
+
+      <a id="examples" href="/examples" class="navitton"> EXAMPLES </a>
+      
+      {{#if loginUser}}
+        <div id="loggedAccount" class="navitton">
+          {{loginUser}}
+        </div>
+      
+        <div id="logInOut" class="navitton">
+          <div>
+            <a href="/settings" style="text-decoration: none;">Acc Info</a>
+          </div>
+          <br>
+          <div>
+            <a href="/signUp" style="text-decoration: none;">Sign Up</a>
+          </div>
+          <br>
+          <div>
+            <a href="/logIn" style="text-decoration: none;">Switch Acc</a>
+          </div>   
+          <br>
+          <div>
+            <a href="/logOut" style="text-decoration: none;">Log Out</a>
+          </div>   
+        </div>
+      {{else}}
+      <div id="account" class="navitton"> <a href="/signUp">SIGN UP</a> <a href="/logIn">LOG IN</a></div>
+      {{/if}}
+      
+    </header>
+    
+    <div id="div2">      
+      <details id="firstContent">
+        <summary id="lHeadr">
+          <span class="icon">»</span>
+          Arithmetic
+        </summary>
+        <ul id="list">
+          <li><a id="tblcntents1" href="#firstTop">1st topic</a></li>
+          <br>
+          <li><a id="tblcntents2" href="#secondTop">2nd topic</a></li>
+          <br>
+          <li><a id="tblcntents3" href="#thirdTop">3rd topic</a></li>
+          <br>
+          <li>Formula:</li>
+        </ul>
+      </details>
+      
+      <figure id="operators">
+        <img src="https://cdn.glitch.global/7919643d-61cc-4c44-b0db-a7659a47c000/arithmeticSymbols?v=1734958295890" height = "275px" width = "550px" alt="Operators" title = "Arithmetic operators">
+        <figcaption style = "color: #486ea1; opacity: 0.5;">
+           4 arithmetic operators.
+        </figcaption>
+      </figure>
+      
+      <figure id="calcuPic">
+        <img src="https://cdn.glitch.global/7919643d-61cc-4c44-b0db-a7659a47c000/arithmetic.JPG?v=1734962205141" height = "110px" width = "110px" alt="Calculator" title = "Calculator">
+        <figcaption style = "color: #486ea1; opacity: 0.5;">
+          A calculator.
+        </figcaption>
+      </figure>
+      
+      <div id="secondContent" style="font-size:100%;">
+        <pre>
+        Examples:
+        example 1
+        4+8*9
+        solution
+        4+8*9=4+72=76
+       
+        example 2
+        23*3/3
+        solution
+        23*3/3=69/3=23
+        </pre>
+        
+      </div>
+      
+      <div id="thirdContent">
+        Calculator:<br>
+        Input two numbers with commas in between (NO spaces). Click on the label to output.<br><br>
+        <table id="table"> 
+        <tr>
+          <th>output</th> <th> input </th>
+        </tr>
+        <tr> 
+          <td><button onclick="multiply()"><span id="mult2">multiply</span></button></td>
+          <td><input id="mult1" type="value"/></td>
+        </tr>
+        <tr> 
+          <td><button onclick="addition()"><span id="add2">add</span></button></td>
+          <td><input id="add1" type="value"/></td>
+        </tr>
+        <tr>
+          <td><button onclick="subtraction()"><span id="minus2">subtract</span></button></td>
+          <td><input id="minus1" type="value"/></td>
+        </tr>
+        <tr >
+          <td><button onclick="division()"><span id="divid2">divide</span></button></td>
+          <td><input id="divid1" type="value"/></td>
+        </tr>
+      </table>
+      </div>
+      
+      <div id="firstTop">
+        <h1>1st Topic: Basic operators</h1>
+        
+        <p>
+          The most basic operators in arithmetic are addition(+) and subtraction(-). They are the most fundamental operators and will be used for almost every aspect in math.<br>
+          The 2 functions are written in a general format. For addition, the format is "a+b=c" where a and b are the addends (or the ones getting added) and the c is the sum/result.<br><br>
+          Subtraction is a bit trickier but it goes like "a-b=c" and a is the minuend and b is the subtrahend and c is the difference/result.<br><br>
+          To solve problems involving these arithmetic functions, you have to use the principle of counting. Addition is very simple as you will only start from the 1st addend and count how many times the 2nd addend is.<br>
+          Subtraction is like addition but the other way around. You start from the minuend and then start counting down to the subtrahend.<br> Very simple!!
+        </p>
+        
+      </div>
+      
+      <div id="secondTop">
+        <h1>2nd Topic: Intermediate operators</h1>
+        <p>
+          The next lesson is the other 2 common operators which are multiplication(*) and division(/). Both of them rely on the principles discussed in the past lesson. <br>
+          Like the basic operators, these functions are written in the general format.<br><br> For multiplication, it is "a*b=c" where a is the multiplicand and b is the multiplicator and c is the product/result. <br><br>
+          For division, it goes like "a/b=c" where a is the dividend and b is the divisor and c is the quotient/result.<br> But b cannot be 0 because the whole equation will be undefined. <br><br>
+          Multiplication and division uses addition and subtraction for solving. Multiplication uses repeated addition where the multiplicand will be added to itself for how much the multiplicator is (ex. 2*3 is 2+2+2 or 6). <br>
+          Division is similar. The divisor will be subtracted to the dividend over and over again until the dividend becomes 0, then you take the amount of times the subtraction happened and that will be the quotient (ex. 4/2 is 4-2-2, the subtraction happened twice so the quotient is 2)
+          <br><br>Quite Tricky but bearable!!
+        </p>
+      </div>
+      
+      <div id="thirdTop" style="top:2200px;">
+        <h1>
+          3rd Topic: Advanced operators
+        </h1>
+        <p>
+          Advanced operators not usually used in elementary but will come in handy for future lessons. The 2 that will be discussed is exponents and roots. <br>
+          Exponents are basically just repeated multiplication. It is denoted as a^b where a is the base and b is the exponent. To evaluate this, you have to multiply a by itself b times <br>
+          For example, 3^4 can be rewritten as 3*3*3*3 which is 81. Notice that 3 (base) was multiplied to itself 4 times (exponent) <br>
+          Next that we're going to discusse are roots. Its general formula is a√(b). It is just like asking "what is a number that when I exponentiate a will result in b?" <br>
+          An example would be 3√(27). We are tasked to find the number that when exponentiated by 3, will result in 27. For this expression, the answer is 3 because 3^3 will be 27.
+        </p>
+      </div>
+    </div>
+
+  
+    <footer>
+      <span id="both">
+        <a href="https://www.facebook.com/profile.php?id=61571987821440"><div
+            id="fb"
+          ></div></a>
+        <a href="https://precy-s.github.io/MathHub/public/"><div
+            id="gh"
+          ></div></a>
+        <a href="mailto:hubforhighschoolmath@gmail.com"><div
+            id="email"
+          ></div></a>
+      </span>
+
+      <a id="about" class="footertton" href="/about"> About </a>
+
+      <a id="sources" class="footertton" href="/sources"> Sources </a>
+    </footer>
+
+
+    <script defer src="arith.js"></script>
+  </body>
+</html>
 
