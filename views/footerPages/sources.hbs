@@ -1,1 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="author" content="Chavenia, Senen 9-Potassium">
+  <meta name="description" content="">
+  <meta name="keywords" content="PSHS-MC, CS3, meta, favicon, graded, for school, CS3 student, Potassium, Personalized, 
+   input, output, HTML, CSS, JavaScript">
+  <title></title>
+  <link href="styleIndex.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/x-icon" href="https://cdn.glitch.global/7919643d-61cc-4c44-b0db-a7659a47c000/mHubFavicon?v=1734233335738" size="16x16">
+</head>
+  <body>
+    <header>
+      <a href="/" id="logo" alt="Home" title="Math Hub: return Home">
+        <!--anchor tag-->
+      </a>
+
+      <a id="calcu" href="/calcu" class="navitton"> CALCULATOR </a>
+
+      <a id="learn" href="/learn" class="navitton"> LEARN </a>
+
+      <a id="examples" href="/examples" class="navitton"> EXAMPLES </a>
+      
+      {{#if loginUser}}
+        <div id="loggedAccount" class="navitton">
+          {{loginUser}}
+        </div>
+      
+        <div id="logInOut" class="navitton">
+          <div>
+            <a href="/settings" style="text-decoration: none;">Acc Info</a>
+          </div>
+          <br>
+          <div>
+            <a href="/signUp" style="text-decoration: none;">Sign Up</a>
+          </div>
+          <br>
+          <div>
+            <a href="/logIn" style="text-decoration: none;">Switch Acc</a>
+          </div>   
+          <br>
+          <div>
+            <a href="/logOut" style="text-decoration: none;">Log Out</a>
+          </div>   
+        </div>
+      {{else}}
+      <div id="account" class="navitton"> <a href="/signUp">SIGN UP</a> <a href="/logIn">LOG IN</a></div>
+      {{/if}}
+      
+    </header>
+    
+    <div id="div2"> 
+      <div id="firstContent">
+        <span id="headr">
+          Sources
+        </span> 
+        
+        <span id="words"><br>
+          Admin. (2022, May 17). What is Arithmetic? Definition and Examples of Arithmetic Operations. BYJUS. https://byjus.com/maths/arithmetic/
+          <br>
+          Best way to center a  on a page vertically and horizontally? (n.d.). Stack Overflow. https://stackoverflow.com/questions/356809/best-way-to-center-a-div-on-a-page-vertically-and-horizontally
+          <br>
+          GeeksforGeeks. (2024, September 13). How to store an array in localStorage ? GeeksforGeeks. https://www.geeksforgeeks.org/how-to-store-an-array-in-localstorage/
+          <br>
+          how to add new  to  onclick with javascript. (n.d.). Stack Overflow. https://stackoverflow.com/questions/20673959/how-to-add-new-li-to-ul-onclick-with-javascript
+          <br>
+          JSFiddle. (n.d.). Edit fiddle - JSFiddle - Code Playground. Share Alike. https://jsfiddle.net/h6wsuzx1/
+          <br>
+          r/memes. (2020, March 28). Algebruh [Post]. Reddit. https://www.reddit.com/r/memes/comments/ftkuk2/algebruh/?rdt=41110
+          <br>
+          W3Schools.com. (n.d.). https://www.w3schools.com/css/css3_gradients.asp
+          <br>
+          W3Schools.com. (n.d.). https://www.w3schools.com/css/css_margin.asp
+          <br>
+          W3Schools.com. (n.d.). https://www.w3schools.com/css/css_padding.asp
+          <br>
+          W3Schools.com. (n.d.). https://www.w3schools.com/css/css_positioning.asp
+          <br>
+          W3Schools.com. (n.d.). https://www.w3schools.com/HOWTO/howto_js_alert.asp
+          <br>
+          W3Schools.com. (n.d.). https://www.w3schools.com/howto/howto_css_display_element_hover.asp
+          <br>
+          W3Schools.com. (n.d.). https://www.w3schools.com/howto/howto_js_toggle_password.asp
+          <br>
+          W3Schools.com. (n.d.). https://www.w3schools.com/howto/howto_js_trigger_button_enter.asp
+          <br>
+          W3Schools.com. (n.d.). https://www.w3schools.com/html/html_links.asp    
+          <br>
+          W3Schools.com. (n.d.). https://www.w3schools.com/jsref/prop_win_localstorage.asp
+        </span>
+      </div>
+    </div>
+
+    <footer>
+      <span id="both">
+        <a href="https://www.facebook.com/profile.php?id=61571987821440"><div
+            id="fb"
+          ></div></a>
+        <a href="https://precy-s.github.io/MathHub/public/"><div
+            id="gh"
+          ></div></a>
+        <a href="mailto:hubforhighschoolmath@gmail.com"><div
+            id="email"
+          ></div></a>
+      </span>
+
+      <a id="about" class="footertton" href="/about"> About </a>
+
+      <a id="sources" class="footertton" href="/sources"> Sources </a>
+    </footer>
+
+
+    <script defer src="script.js"></script>
+  </body>
+</html>
 
