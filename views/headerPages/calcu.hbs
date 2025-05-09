@@ -1,1 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="author" content="Chavenia, Senen 9-Potassium" />
+    <meta name="description" content="" />
+    <meta
+      name="keywords"
+      content="PSHS-MC, CS3, meta, favicon, graded, for school, CS3 student, Potassium, Personalized, 
+   input, output, HTML, CSS, JavaScript"
+    />
+    <title></title>
+    <link href="styleIndex.css" rel="stylesheet" type="text/css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://cdn.glitch.global/7919643d-61cc-4c44-b0db-a7659a47c000/mHubFavicon?v=1734233335738"
+      size="16x16"
+    />
+  </head>
+  <body>
+    <header>
+      <a href="/" id="logo" alt="Home" title="Math Hub: return Home">
+        <!--anchor tag-->
+      </a>
 
+      <a id="calcu" href="/calcu" class="navitton"> CALCULATOR </a>
+
+      <a id="learn" href="/learn" class="navitton"> LEARN </a>
+
+      <a id="examples" href="/examples" class="navitton"> EXAMPLES </a>
+      
+      {{#if loginUser}}
+        <div id="loggedAccount" class="navitton">
+          {{loginUser}}
+        </div>
+      
+        <div id="logInOut" class="navitton">
+          <div>
+            <a href="/settings" style="text-decoration: none;">Acc Info</a>
+          </div>
+          <br>
+          <div>
+            <a href="/signUp" style="text-decoration: none;">Sign Up</a>
+          </div>
+          <br>
+          <div>
+            <a href="/logIn" style="text-decoration: none;">Switch Acc</a>
+          </div>   
+          <br>
+          <div>
+            <a href="/logOut" style="text-decoration: none;">Log Out</a>
+          </div>   
+        </div>
+      {{else}}
+      <div id="account" class="navitton"> <a href="/signUp">SIGN UP</a> <a href="/logIn">LOG IN</a></div>
+      {{/if}}
+      
+    </header>
+
+    <div id="div2">
+      <div id="firstContent">
+        <span id="headr"> Please click one of the following for the calculators </span>
+      </div>
+
+      <div id="div3">
+        <a id="eAl" href="/easyAlgebra" class="topicton"> LINEAR calculator </a>
+
+        <a id="arith" href="/arithmetic" class="topicton"> ARITHMETIC calculator </a>
+
+        <a id="hAl" href="/hardAlgebra" class="topicton"> QUADRATIC calculator </a>
+      </div>
+    </div>
+
+    <footer>
+      <span id="both">
+        <a href="https://www.facebook.com/profile.php?id=61571987821440"><div
+            id="fb"
+          ></div></a>
+        <a href="https://precy-s.github.io/MathHub/public/"><div
+            id="gh"
+          ></div></a>
+        <a href="mailto:hubforhighschoolmath@gmail.com"><div
+            id="email"
+          ></div></a>
+      </span>
+
+      <a id="about" class="footertton" href="/about"> About </a>
+
+      <a id="sources" class="footertton" href="/sources"> Sources </a>
+    </footer>
+    
+    <script defer src="script.js"></script>
+  </body>
+</html>
